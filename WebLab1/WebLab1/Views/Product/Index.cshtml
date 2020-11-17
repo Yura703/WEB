@@ -1,0 +1,133 @@
+﻿@using WebLab.Models;
+@model ListViewModel<Plane>
+
+
+@{
+    ViewData["Title"] = "Каталог";
+
+    var categories = ViewData["Groups"] as IEnumerable<PlaneGroup>;
+    int currentGroup = (int)ViewData["CurrentGroup"];
+    var text = currentGroup !=0 ? categories.FirstOrDefault(g => g.PlaneGroupId == currentGroup)?.GroupName : "Все";
+ } 
+
+<div class="row">
+    <div class="col-2">
+        <div class="dropdown mt-2">
+            <a class="btn btn-secondary dropdown-toggle"
+               asp-action="Index" asp-controller="Product"
+               role="button"
+               id="dropdownMenuLink"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                @text
+            </a>
+            <div class="dropdown-menu"
+                 aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item"
+                   asp-action="Index"
+                   asp-controller="Product">Все</a>
+                @foreach (var item in categories)
+                {
+                    <a class="dropdown-item"
+                       asp-action="Index"
+                       asp-controller="Product"
+                       asp-route-group="@item.PlaneGroupId"
+                       asp-route-pageNo="1">@item.GroupName</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="card-group" id="list">
+        <partial name="_ListPartial" model="@Model" />
+    </div>
+    
+    <pager page-current="@Model.CurrentPage"
+           page-total="@Model.TotalPages"
+           action="Index"
+           controller="Product"
+           group-id="@currentGroup"></pager>
+</div>       
+    
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<h1>Index</h1>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DishId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DishName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Calories)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DishGroupId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DishId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DishName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Calories)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Image)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DishGroupId)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>*@

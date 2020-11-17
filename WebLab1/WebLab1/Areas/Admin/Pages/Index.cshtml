@@ -1,0 +1,72 @@
+﻿@page
+@model WebLab.Areas.Admin.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p class="mt-2">
+    <a asp-page="Create" class="btn btn-outline-info">
+        <span class="fa fa-plus-circle"> Добавить</span>
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plane[0].PlaneName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plane[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plane[0].Speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plane[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plane[0].Group)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Plane)
+        {
+            <tr>
+                <td>
+                    <img src="~/Images/@item.Image" alt="NoImage" width="50" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlaneName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Speed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group.PlaneGroupId)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.PlaneId"
+                       class="btn btn-outline-info">
+                        <span class="fas fa-edit"></span>
+                    </a>
+
+
+                    <a asp-page="./Delete" asp-route-id="@item.PlaneId"
+                       class="btn btn-outline-danger">
+                        <span class="fas fa-trash-alt"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
