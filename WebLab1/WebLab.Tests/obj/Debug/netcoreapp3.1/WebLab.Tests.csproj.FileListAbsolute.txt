@@ -231,7 +231,6 @@ E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Moq.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-E:\GIT\WEB\WebLab1\WebLab.Tests\obj\Debug\netcoreapp3.1\WebLab.Tests.csproj.CoreCompileInputs.cache
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
@@ -251,3 +250,11 @@ E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+E:\GIT\WEB\WebLab1\WebLab.Tests\obj\Debug\netcoreapp3.1\WebLab.Tests.csproj.CoreCompileInputs.cache

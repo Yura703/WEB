@@ -1,0 +1,39 @@
+﻿@page
+@model WebLab.Areas.ApiDemo.Pages.IndexModel
+@{
+}
+<table class="table table-striped table-sm" id="list"></table>
+<div class="lead" id="info"></div>
+
+@section Scripts{
+    <script>
+        var url = "@Url.Action("GetPlanes", "Planes")";
+                 $(document).ready(function () {
+                     $.getJSON(url, function (data) {       // послать запрос
+                         var table = $("#list");                // найти таблицу по id
+                         $.each(data, function (num, value) {  // сформировать строку для каждого полученного объекта
+                              createRow(num+1, value).appendTo(table);
+                         })
+                     });
+                 })
+
+        function createRow(index, data) { // Функция формирования одной строки таблицы, index - порядковый номер, data - объект данных
+            var row = $("<tr>");                                   // создать строку таблицы
+            row.append("<td>" + index + "</td>");                  // добавть колонку с порядковым номером
+            row.append("<td>" + data.planeName + "</td>");          // добавить колонку с названием
+            var button = $("<button>").addClass("btn btn-success") // создать кнопку, стиль кнопки            
+                .click(data.planeId, showDetails).text("Подробно"); // подписка на событие click, надпись
+            var td = $("<td>").append(button);                     // создать колонку с кнопкой
+            row.append(td);                                        // добавить в строку таблицы
+            return row;
+        }
+
+        function showDetails(e) { //Функция выода информации о выбранном объекте
+
+            $.getJSON(url + "/" + e.data, function (data) {   // Послать запрос
+                var details = data.planeName + ": " + data.description + " - " + data.speed + " км/ч"; // строка информации об объекте
+                $("#info").empty().text(details);   // Найти блок для информации, очистить содержимое, записать новый текст
+            })
+        }
+    </script>
+}

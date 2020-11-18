@@ -5,5 +5,5 @@ E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.AssemblyInfo.cs
 E:\GIT\WEB\WebLab1\WebLab.DAL\bin\Debug\netcoreapp3.1\WebLab.DAL.pdb
 E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.dll
 E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.pdb
-E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.csproj.CoreCompileInputs.cache
 E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.csprojAssemblyReference.cache
+E:\GIT\WEB\WebLab1\WebLab.DAL\obj\Debug\netcoreapp3.1\WebLab.DAL.csproj.CoreCompileInputs.cache

@@ -26,7 +26,7 @@ namespace WebLab.Models
         /// <summary>
         /// Количество калорий
         /// </summary>
-        public int Calories
+        public int Speeds
         {
             get
             {
@@ -37,7 +37,7 @@ namespace WebLab.Models
         /// Добавление в корзину
         /// </summary>
         /// <param name="plane">добавляемый объект</param>
-        public void AddToCart(Plane plane)
+        virtual public void AddToCart(Plane plane)
         {
             // если объект есть в корзине
             // то увеличить количество
@@ -49,14 +49,14 @@ namespace WebLab.Models
         /// Удалить объект из корзины
         /// </summary>
         /// <param name="id">id удаляемого объекта</param>
-        public void RemoveFromCart(int id)
+        virtual public void RemoveFromCart(int id)
         {
             Items.Remove(id);
         }
         /// <summary>
         /// Очистить корзину
         /// </summary>
-        public void ClearAll()
+        virtual public void ClearAll()
         {
             Items.Clear();
         }

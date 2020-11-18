@@ -1,0 +1,22 @@
+﻿@using WebLab.Blazor.Data
+@if (Plane != null)
+{
+    <img src="@imageSrc" class="img-thumbnail" width="150" />
+    <div>
+        <p>@Plane.PlaneName - @Plane.Description</p>
+        <div class="badge badge-info ">@Plane.Speed км/ч </div>
+    </div>
+}
+@code {
+    [Parameter]
+    public PlaneDetailsViewModel Plane { get; set; }
+    [Parameter]
+    public EventCallback<PlaneDetailsViewModel> PlaneChanged { get; set; }
+    string imageSrc
+    {
+        get
+        {
+            return $"https://localhost:44392/images/{Plane.Image}";
+        }
+    }
+}

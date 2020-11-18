@@ -50,7 +50,7 @@ namespace WebLab.Tests
             {
                 context.Database.EnsureDeleted();
             }
-        }        
+        }
 
         [Fact]
         public void ControllerSelectsGroup()
@@ -84,23 +84,4 @@ namespace WebLab.Tests
 
 
 
-//var controllerContext = new ControllerContext(); // Контекст контроллера            
-//            var moqHttpContext = new Mock<HttpContext>(); // Макет HttpContext
-//            moqHttpContext.Setup(c => c.Request.Headers).Returns(new HeaderDictionary());
-//            controllerContext.HttpContext = moqHttpContext.Object;
-//            var controller = new ProductController()
-//            { ControllerContext = controllerContext };
-//            // arrange
-//           // var controller = new ProductController();
-//            var data = TestData.GetPlanesList();
-//            controller._planes = data;
-//            var comparer = Comparer<Plane>.GetComparer((d1, d2) => d1.PlaneId.Equals(d2.PlaneId));
-//            // act
-//            var result = controller.Index(2) as ViewResult; 
-//            var model = result.Model as List<Plane>;
-//            // assert
-//            Assert.Equal(2, model.Count);
-//            Assert.Equal(data[2], model[0], comparer);
-//        }
-//    }   
-//}
+

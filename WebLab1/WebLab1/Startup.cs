@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -15,12 +15,16 @@ using WebLab.DAL.Data;
 using WebLab.DAL.Entities;
 using WebLab.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using WebLab.Models;
+using WebLab.Extensions;
+//using Castle.Core.Logging;
 
 namespace WebLab1
 {
     public class Startup
     {
-
+        
 
         public Startup(IConfiguration configuration)
         {
@@ -56,8 +60,8 @@ namespace WebLab1
                 opt.Cookie.IsEssential = true;
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<Cart>(sp => CartService.GetCart(sp));
 
             //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -68,8 +72,11 @@ namespace WebLab1
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app,  IWebHostEnvironment env,  ApplicationDbContext context,  UserManager<ApplicationUser> userManager,  RoleManager<IdentityRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,
+                      UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,  ILoggerFactory logger)
         {
+            logger.AddFile("Logs/log-{Date}.txt");
+
             DbInitializer.Seed(context, userManager, roleManager)
                                 .GetAwaiter()
                                 .GetResult();
@@ -92,7 +99,8 @@ namespace WebLab1
 
             app.UseAuthentication();
             app.UseSession();
-            app.UseAuthorization();   
+            app.UseAuthorization();
+            app.UseFileLogging();
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,0 +1,45 @@
+﻿@page "/apidemo"
+@inject IHttpClientFactory clientFactory
+@using WebLab.Blazor.Data
+@using System.Text.Json;
+
+<div class="container">
+    <PlanesList @bind-Planes="planes" SelectedObjectChanged="ShowDetails"></PlanesList>
+</div>
+<div class="container">
+    <PlanesList @bind-Planes="planes" SelectedObjectChanged="ShowDetails"></PlanesList>
+    <PlaneDetails @bind-Plane="SelectedPlane"></PlaneDetails>
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<PlaneListViewModel> planes { get; set; }
+    string apiBaseAddress = "https://localhost:44392/Api/Planes";
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, apiBaseAddress);
+        var client = clientFactory.CreateClient();
+        var response = await client.SendAsync(request);//client.GetAsync(apiBaseAddress);
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            planes = await JsonSerializer.DeserializeAsync<IEnumerable<PlaneListViewModel>>
+            (responseStream,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+    }
+    [Parameter]
+    public PlaneDetailsViewModel SelectedPlane { get; set; }
+    private async Task ShowDetails(int id)
+    {
+        var client = clientFactory.CreateClient();
+        var response = await client.GetAsync(apiBaseAddress + $"/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            SelectedPlane = await JsonSerializer.DeserializeAsync<PlaneDetailsViewModel>(responseStream);
+        }
+    }
+}
+
+

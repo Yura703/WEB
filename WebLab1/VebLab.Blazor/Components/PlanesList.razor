@@ -1,0 +1,35 @@
+﻿@using WebLab.Blazor.Data
+<h3>PlanesList</h3>
+@if (Planes == null)
+{
+    <p>Загрузка ...</p>
+}
+else
+{ <div class="list-group">
+    @{
+        var i = 1;
+        foreach (var plane in Planes)
+        {
+          <button type="button" class="list-group-item list-group-item-action 
+                  @(SelectedId == plane.PlaneId ? "active" : "")"
+                  @onclick="@(e => Selected(e, plane.PlaneId))">
+              @(i++) - @plane.PlaneName
+          </button>}
+    }
+    </div>
+}
+@code {
+    [Parameter]
+    public IEnumerable<PlaneListViewModel> Planes { get; set; }
+    [Parameter]
+    public EventCallback<IEnumerable<PlaneListViewModel>> PlanesChanged { get; set; }
+
+    private int SelectedId = 0;
+    [Parameter]
+    public EventCallback<int> SelectedObjectChanged { get; set; }
+    private void Selected(MouseEventArgs e, int id)
+    {
+        SelectedId = id;
+        SelectedObjectChanged.InvokeAsync(id);
+    }
+}
