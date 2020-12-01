@@ -2,19 +2,19 @@
 @inject IHttpClientFactory clientFactory
 @using WebLab.Blazor.Data
 @using System.Text.Json;
+@using VebLab.Blazor.Components
 
 <div class="container">
     <PlanesList @bind-Planes="planes" SelectedObjectChanged="ShowDetails"></PlanesList>
-</div>
-<div class="container">
-    <PlanesList @bind-Planes="planes" SelectedObjectChanged="ShowDetails"></PlanesList>
     <PlaneDetails @bind-Plane="SelectedPlane"></PlaneDetails>
+    
 </div>
 
 @code {
     [Parameter]
     public IEnumerable<PlaneListViewModel> planes { get; set; }
-    string apiBaseAddress = "https://localhost:44392/Api/Planes";
+    //44392
+    string apiBaseAddress = "https://localhost:44310/Api/Planes";
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get, apiBaseAddress);

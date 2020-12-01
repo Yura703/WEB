@@ -14,7 +14,6 @@ E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared
 E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\_Imports.razor.g.cs
 E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\appsettings.json
-E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\VebLab.Blazor.exe
 E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\VebLab.Blazor.deps.json
 E:\GIT\WEB\WebLab1\VebLab.Blazor\bin\Debug\netcoreapp3.1\VebLab.Blazor.runtimeconfig.json
@@ -52,3 +51,7 @@ E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\
 E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\ApiDemo.razor.g.cs
 E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\PlaneDetails.razor.g.cs
 E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\PlanesList.razor.g.cs
+e:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\Razor\Components\PlaneDetails.razor.g.cs
+e:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\Razor\Components\PlanesList.razor.g.cs
+E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\VebLab.Blazor.RazorComponent.output.cache
+E:\GIT\WEB\WebLab1\VebLab.Blazor\obj\Debug\netcoreapp3.1\scopedcss\bundle\VebLab.Blazor.styles.css

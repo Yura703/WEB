@@ -3,9 +3,6 @@ E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\WebLab.Views.pdb
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\appsettings.json
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\libman.json
-E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
-E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\WebLab.StaticWebAssets.xml
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\WebLab.exe
 E:\GIT\WEB\WebLab1\WebLab.Tests\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll

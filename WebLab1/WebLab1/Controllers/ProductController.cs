@@ -18,22 +18,28 @@ namespace WebLab.Controllers
         int _pageSize;
 
         private ILogger _logger;
-        public ProductController(ApplicationDbContext context, ILogger<ProductController> logger)
+        //public ProductController(ApplicationDbContext context, ILogger<ProductController> logger)//---------------------
+        //{
+        //    _pageSize = 3;
+        //    _context = context;
+        //    _logger = logger;
+        //}
+        public ProductController(ApplicationDbContext context)
         {
             _pageSize = 3;
-            _context = context;
-            _logger = logger;
+            _context = context;            
         }
        
         [Route("Catalog")]
         [Route("Catalog/Page_{pageNo}")]
-        public IActionResult Index(int? group, int pageNo)
+        //public IActionResult Index(int? group, int pageNo)//--------------------------------
+        public IActionResult Index(int? group, int pageNo=1)
         {
-            var groupName = group.HasValue ? _context.PlaneGroups.Find(group.Value)?.GroupName : "all groups";//--------------
-            _logger.LogInformation($"info: group={group}, page={pageNo}");
+            var groupName = group.HasValue ? _context.PlaneGroups.Find(group.Value)?.GroupName : "all groups";
+            //_logger.LogInformation($"info: group={group}, page={pageNo}");//ошибка
             var planesFiltered = _context.Planes.Where(d => !group.HasValue || d.PlaneGroupId == group.Value);
 
-            //public IActionResult Index(int? group, int pageNo = 1)
+           
         
             
             // Поместить список групп во ViewData

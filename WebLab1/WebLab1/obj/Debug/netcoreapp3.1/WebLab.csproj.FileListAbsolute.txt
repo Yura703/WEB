@@ -1,9 +1,6 @@
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\appsettings.json
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\libman.json
-E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
-E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\WebLab.StaticWebAssets.xml
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\WebLab.exe
 E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\WebLab.deps.json
@@ -222,3 +219,4 @@ E:\GIT\WEB\WebLab1\WebLab1\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
 E:\GIT\WEB\WebLab1\WebLab1\obj\Debug\netcoreapp3.1\Razor\Areas\ApiDemo\Pages\Index.cshtml.g.cs
 E:\GIT\WEB\WebLab1\WebLab1\obj\Debug\netcoreapp3.1\Razor\Areas\ApiDemo\Pages\_ViewImports.cshtml.g.cs
 E:\GIT\WEB\WebLab1\WebLab1\obj\Debug\netcoreapp3.1\Razor\Areas\ApiDemo\Pages\_ViewStart.cshtml.g.cs
+E:\GIT\WEB\WebLab1\WebLab1\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebLab.styles.css
